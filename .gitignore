@@ -1,2 +1,4 @@
 /alf_data_dev/
 /target/
+*.log
+*.log.*
