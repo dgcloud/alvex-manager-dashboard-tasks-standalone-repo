@@ -92,7 +92,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>3.2.17.RELEASE</version>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!-- Integration tests need httpcomponents to execute tests -->
@@ -134,7 +134,7 @@
                     <!-- We don't need the share.war if we don't have any UI extensions -->
                     <enableShare>false</enableShare>
                     <!-- Enable the REST API Explorer -->
-                    <enableApiExplorer>true</enableApiExplorer>
+                    <enableApiExplorer>false</enableApiExplorer>
 
                     <!--
                        JARs and AMPs that should be overlayed/applied to the Platform/Repository WAR
@@ -314,10 +314,6 @@
                 <filtering>true</filtering>
             </testResource>
         </testResources>
-
-
-
-
     </build>
 
     <!--
