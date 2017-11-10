@@ -1,4 +1,4 @@
-<import resource="classpath:alfresco/extension/templates/webscripts/alvex-config/alvex-config.lib.js">
+<import resource="classpath:alfresco/templates/webscripts/alvex-config/alvex-config.lib.js">
 
 var sortByWeight = function(a, b)
 {
