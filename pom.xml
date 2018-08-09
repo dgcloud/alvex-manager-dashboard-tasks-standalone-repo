@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.dgcloud</groupId>
     <artifactId>alvex-manager-dashboard-tasks-standalone-repo</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>alvex-manager-dashboard-tasks-standalone-repo Repository Module</name>
     <description>Repository Module (to be included in the alfresco.war)</description>
     <packaging>jar</packaging>
@@ -34,9 +34,9 @@
         <!-- Alfresco Platform webapp version, this is the original Alfresco webapp that will be
             customized and then deployed and run by the tomcat maven plugin when
             executing for example $ mvn clean install alfresco:run -->
-        <alfresco.platform.version>5.0.d</alfresco.platform.version>
+        <alfresco.platform.version>5.2.g</alfresco.platform.version>
         <!-- Alfresco Share version, so we can bring in correct alfresco-share-services artifact -->
-        <alfresco.share.version>5.0.d</alfresco.share.version>
+        <alfresco.share.version>5.2.f</alfresco.share.version>
 
         <!-- Default is to run with a Community edition, change to 'enterprise' if using Enterprise edition -->
         <maven.alfresco.edition>community</maven.alfresco.edition>
@@ -77,6 +77,18 @@
         <dependency>
             <groupId>${alfresco.groupId}</groupId>
             <artifactId>alfresco-repository</artifactId>
+        </dependency>
+        
+		<dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-remote-api</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Bring in Alfresco RAD so we get access to AlfrescoTestRunner classes -->
